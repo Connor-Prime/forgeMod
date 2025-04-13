@@ -1,4 +1,8 @@
 {
-  "item.tutorialmod.alexandrite": "Alexanderite",
-  "item.tutorialmod.raw_alexandrite": "Raw Alexanderite"
+  "item.tutorialmod.alexandrite": "Alexandrite",
+  "item.tutorialmod.raw_alexandrite": "Raw Alexanderite",
+  "block.tutorialmod.alexandrite_block": "Alexandrite Block",
+  "block.tutorialmod.raw_alexandrite_block": "Raw Alexandrite Block",
+  "creativetab.tutorialmod.alexandrite_items": "Alexandrite Items",
+  "creativetab.tutorialmod.alexandrite_blocks": "Alexandrite Blocks"
 }

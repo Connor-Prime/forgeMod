@@ -14,6 +14,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.primetime.tutorialmod.block.ModBlocks;
+import net.primetime.tutorialmod.item.ModCreativeModeTab;
 import net.primetime.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -30,9 +32,11 @@ public class TutorialMod {
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
+        //Creative mod tab
+        ModCreativeModeTab.CREATIVE_MODE_TABS.register(modEventBus);
+        //Registering Blocks and Items
         ModItems.register(modEventBus);
-
+        ModBlocks.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -48,6 +52,10 @@ public class TutorialMod {
     if (event.getTabKey()== CreativeModeTabs.INGREDIENTS){
         event.accept(ModItems.ALEXANDRITE);
         event.accept(ModItems.RAW_ALEXANDRITE);
+    }
+    if (event.getTabKey()==CreativeModeTabs.BUILDING_BLOCKS){
+        event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+        event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
     }
     }
 
