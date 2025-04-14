@@ -59,6 +59,9 @@ public class TutorialMod {
         event.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE);
         event.accept(ModBlocks.ALEXANDRITE_ORE);
     }
+    if(event.getTabKey()==CreativeModeTabs.TOOLS_AND_UTILITIES){
+        event.accept(ModItems.CHISEL);
+    }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
