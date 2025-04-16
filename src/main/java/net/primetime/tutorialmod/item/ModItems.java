@@ -1,13 +1,13 @@
 package net.primetime.tutorialmod.item;
 
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.primetime.tutorialmod.TutorialMod;
 import net.primetime.tutorialmod.item.custom.ChiselItem;
+import net.primetime.tutorialmod.item.custom.AirStaffItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -20,6 +20,9 @@ public class ModItems {
     public static final RegistryObject<Item>CHISEL= ITEMS.register(
             "chisel",()->(new ChiselItem(new Item.Properties().durability(32))
             ));
+
+    public static final RegistryObject<Item>AIR_STAFF=ITEMS.register("air_staff",
+            ()->new AirStaffItem(new Item.Properties()));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

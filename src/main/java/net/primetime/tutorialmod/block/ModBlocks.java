@@ -5,6 +5,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -13,6 +14,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.primetime.tutorialmod.TutorialMod;
+import net.primetime.tutorialmod.block.custom.LaunchBlock;
+import net.primetime.tutorialmod.block.custom.MagicBlock;
 import net.primetime.tutorialmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -32,6 +35,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block>RAW_ALEXANDRITE_BLOCK=registerBlock("raw_alexandrite_block",
             ()->new DropExperienceBlock(UniformInt.of(3,5),BlockBehaviour.Properties.of().strength(3).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public  static final RegistryObject<Block>MAGIC_BLOCK=registerBlock("magic_block",
+            ()->new MagicBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public  static final RegistryObject<Block>LAUNCH_BLOCK=registerBlock("launch_block",
+            ()->new LaunchBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T>block){
         RegistryObject<T>toReturn = BLOCKS.register(name, block);
         registerBlockItem(name,toReturn);
