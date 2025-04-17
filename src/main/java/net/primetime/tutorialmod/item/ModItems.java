@@ -6,8 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.primetime.tutorialmod.TutorialMod;
-import net.primetime.tutorialmod.item.custom.ChiselItem;
-import net.primetime.tutorialmod.item.custom.AirStaffItem;
+import net.primetime.tutorialmod.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -23,6 +22,12 @@ public class ModItems {
 
     public static final RegistryObject<Item>AIR_STAFF=ITEMS.register("air_staff",
             ()->new AirStaffItem(new Item.Properties()));
+
+    public static final RegistryObject<Item>COFFEE=ITEMS.register("coffee",
+            ()->new CoffeeItem(new Item.Properties().food(ModFoodProperties.COFFEE)));
+
+    public static final RegistryObject<Item>STAR_FUEL=ITEMS.register("star_fuel",
+            ()->new FuelItem(new Item.Properties(),5000));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

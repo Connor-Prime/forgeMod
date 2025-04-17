@@ -4,6 +4,8 @@
   "item.tutorialmod.chisel": "Chisel",
   "item.tutorialmod.launcher": "Launcher",
   "item.tutorialmod.air_staff": "Air Staff",
+  "item.tutorialmod.coffee": "Java",
+  "item.tutorialmod.star_fuel": "Star Fuel",
 
   "block.tutorialmod.alexandrite_block": "Alexandrite Block",
   "block.tutorialmod.raw_alexandrite_block": "Raw Alexandrite Block",
@@ -12,5 +14,7 @@
   "block.tutorialmod.magic_block": "Magic Block",
 
   "creativetab.tutorialmod.alexandrite_items": "Alexandrite Items",
-  "creativetab.tutorialmod.alexandrite_blocks": "Alexandrite Blocks"
+  "creativetab.tutorialmod.alexandrite_blocks": "Alexandrite Blocks",
+
+  "tooltip.tutorialmod.air_staff.tooltip": "§odiscovered by the ancient windmasters§r"
 }
